@@ -1,0 +1,94 @@
+@startuml Lyft
+
+package "forage-lyft" {
+    package "engine" {
+        package "model" {
+            class Calliope {
+                +needs_service()
+            }
+
+            class Glissade {
+                +needs_service()
+            }
+
+            class Palindrome {
+                +needs_service()
+            }
+
+            class Rorschach {
+                +needs_service()
+            }
+
+            class Thovex {
+                +needs_service()
+            }
+
+            Calliope --> CapuletEngine
+            Glissade --> WilloughbyEngine
+            Palindrome --> SternmanEngine
+            Rorschach --> WilloughbyEngine
+            Thovex --> CapuletEngine
+        }
+
+        class CapuletEngine {
+            +engine_should_be_serviced()
+        }
+
+        class SternmanEngine {
+            +engine_should_be_serviced()
+        }
+
+        class WilloughbyEngine {
+            +engine_should_be_serviced()
+        }
+
+        CapuletEngine --> Car
+        SternmanEngine --> Car
+        WilloughbyEngine --> Car
+    }
+
+    package "test" {
+        class TestCalliope {
+            +test_battery_should_be_serviced()
+            +test_battery_should_not_be_serviced()
+            +test_engine_should_be_serviced()
+            +test_engine_should_not_be_serviced()
+        }
+
+        class TestGlissade {
+            +test_battery_should_be_serviced()
+            +test_battery_should_not_be_serviced()
+            +test_engine_should_be_serviced()
+            +test_engine_should_not_be_serviced()
+        }
+
+        class TestPalindrome {
+            +test_battery_should_be_serviced()
+            +test_battery_should_not_be_serviced()
+            +test_engine_should_be_serviced()
+            +test_engine_should_not_be_serviced()
+        }
+
+        class TestRorschach {
+            +test_battery_should_be_serviced()
+            +test_battery_should_not_be_serviced()
+            +test_engine_should_be_serviced()
+            +test_engine_should_not_be_serviced()
+        }
+
+        class TestThovex {
+            +test_battery_should_be_serviced()
+            +test_battery_should_not_be_serviced()
+            +test_engine_should_be_serviced()
+            +test_engine_should_not_be_serviced()
+        }
+    }
+
+    class Car {
+        +needs_service()
+    }
+}
+
+@enduml
+
+
